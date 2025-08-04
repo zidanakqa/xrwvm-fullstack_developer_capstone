@@ -1,0 +1,197 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/bootstrap.min.css">
+<style>
+  .contact-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 2rem;
+  }
+  
+  .contact-header {
+    background-color: darkturquoise;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .contact-card h3 {
+    color: darkturquoise;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-card p {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .contact-form {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submit-btn {
+    background-color: darkturquoise;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #00b3b3;
+  }
+</style>
+</head>
+<body>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We're here to help! Reach out to us through any of the following channels.</p>
+    </div>
+    
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📍 Visit Our Showroom</h3>
+        <p><strong>Best Cars Dealership</strong></p>
+        <p>1234 Auto Boulevard</p>
+        <p>Suite 500</p>
+        <p>Detroit, MI 48201</p>
+        <p>USA</p>
+      </div>
+      
+      <div class="contact-card">
+        <h3>📞 Call Us</h3>
+        <p><strong>Sales Department:</strong></p>
+        <p>+1 (555) 123-4567</p>
+        <p><strong>Service Department:</strong></p>
+        <p>+1 (555) 123-4568</p>
+        <p><strong>Hours:</strong></p>
+        <p>Mon-Fri: 9AM - 7PM</p>
+        <p>Sat: 10AM - 5PM</p>
+        <p>Sun: 12PM - 4PM</p>
+      </div>
+      
+      <div class="contact-card">
+        <h3>✉️ Email Us</h3>
+        <p><strong>General Inquiries:</strong></p>
+        <p>info@bestcarsdealership.com</p>
+        <p><strong>Sales:</strong></p>
+        <p>sales@bestcarsdealership.com</p>
+        <p><strong>Customer Service:</strong></p>
+        <p>support@bestcarsdealership.com</p>
+      </div>
+    </div>
+    
+    <div class="contact-form">
+      <h2 style="text-align: center; color: darkturquoise; margin-bottom: 1.5rem;">Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number (Optional)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <div style="text-align: center;">
+          <button type="submit" class="submit-btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
